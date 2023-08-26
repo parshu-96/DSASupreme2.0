@@ -1,0 +1,79 @@
+1. What is return 0?
+	return 0 in the main function means that the program executed successfully. return 1 in the main function means that the program does not execute successfully and there is some error. In user-defined function. return 0 means that the user-defined function is returning false
+
+
+2. WHAT HAPPEN WHEN WE WRITE COUT << "BABBAR" AFTER ; ??
+	In C++, std::cout is the standard output stream object, and you use the << operator to output data to the console. So, when you write std::cout << "BABBAR"; after a semicolon, you are sending the string "BABBAR" to the standard output stream, which is typically the console or terminal where your program is running.
+
+3. -125, -100 MAPPED IN WHICH VALUE
+	The correct mapping involves converting the negative numbers to their binary representation and then applying two's complement. 
+	For -125, the two's complement representation is 10000001, which is 129. For -100, it's 10011100, which is 156.
+
+4. EXPLORE TYPECASTING
+	Typecasting, also known as type conversion, is the process of converting a value from one data type to another in a programming language. It's a fundamental concept in programming and is needed for various reasons, primarily related to ensuring that operations are performed correctly and that data is interpreted as intended.
+
+	Here are some common reasons why typecasting is needed:
+
+	a. Data Compatibility: Different data types can hold different ranges of values and have different memory representations. Typecasting allows you to ensure that data can be used in a compatible manner. For example, converting an integer to a floating-point number so that you can perform division with decimal precision.
+
+	b. Arithmetic Operations: In expressions involving different data types, the language might require you to explicitly convert one type to another to avoid unexpected results. For instance, if you want to add an integer and a floating-point number, you might need to cast the integer to a float before the addition to ensure the result retains decimal precision.
+
+	c. Function Arguments: Functions often expect specific data types as arguments. Typecasting allows you to convert values to the expected types before passing them to functions. This ensures that the function behaves as intended.
+
+	d. Return Values: Similarly, when a function returns a value, you might need to convert the returned value to the desired data type if it's not directly compatible.
+
+	e. Comparisons: When comparing values of different types, typecasting can be used to bring them to a common type for comparison. For example, comparing an integer and a floating-point number.
+
+	f. Memory Management: In languages with manual memory management, typecasting might be needed to interpret a block of memory in different ways. For example, interpreting a sequence of bytes as a different data type.
+
+	g. Custom Conversions: Sometimes, you might have a user-defined class or structure that you want to convert to another type. Typecasting allows you to define custom conversion operations.
+
+
+5. EXPLORE NUMBER SYSTEM => BINARY TO DECIMAL
+	The binary number system is base-2, meaning it uses only two symbols: 0 and 1. The decimal number system, which we commonly use in everyday life, is base-10.
+
+	To convert a binary number to decimal, you need to understand the positional value of each digit in the binary representation. Each digit in a binary number represents a power of 2, starting from the rightmost digit and increasing by 1 as you move to the left.
+
+	Here's a step-by-step process to convert a binary number to decimal:
+
+	Write Down the Binary Number: Start by writing down the binary number you want to convert.
+
+	Assign Positional Values: Assign positional values to each digit in the binary number. The rightmost digit is in the 0th position, the next digit is in the 1st position, then 2nd position, and so on.
+
+	Multiply and Sum: Multiply each digit by 2 raised to its positional value and sum up the results.
+
+	Calculate Decimal Value: The sum from the previous step is the decimal equivalent of the binary number.
+
+
+6. CHECK RANGE SIGNED AND UNSIGNED CHAR
+	In C++, the range of char, both signed and unsigned, is dependent on the specific implementation and the underlying hardware architecture. However, the C++ standard specifies minimum requirements for these ranges.
+
+	Signed Char:
+	The minimum value for a signed char is -127.
+	The maximum value for a signed char is 127.
+	However, it's important to note that the actual range can vary. Many systems use 8 bits to represent a char, making the range -128 to 127. On such systems, the above minimum and maximum values hold true.
+
+	Unsigned Char:
+	The minimum value for an unsigned char is 0.
+	The maximum value for an unsigned char is 255.
+
+7. 32 BIT VS 64 BIT ARCHITECTURE
+	32-bit and 64-bit architectures refer to the word length or the size of memory addresses that a processor uses to access memory. These architectures have significant implications for system performance, memory usage, and software compatibility. Here's a comparison between 32-bit and 64-bit architectures:
+
+	**32-Bit Architecture:**	
+	- **Memory Addressing:** A 32-bit architecture uses 32-bit memory addresses, allowing it to directly address up to 4 GB of memory.
+	- **Software Compatibility:** 32-bit systems can run both 32-bit and 16-bit applications, but they cannot run 64-bit applications natively.
+	- **Performance:** Some operations on 32-bit systems might be slightly faster due to smaller memory pointers and data sizes, but the difference is often not significant for most applications.
+	- **Memory Usage:** 32-bit systems are limited to a 4 GB memory address space, which can be a limitation for memory-intensive applications.
+	- **Usage:** 32-bit architectures were more common in older systems, and some lightweight or embedded systems still use them.
+
+	**64-Bit Architecture:**
+	- **Memory Addressing:** A 64-bit architecture uses 64-bit memory addresses, theoretically allowing it to address up to 18.4 million TB of memory. In practice, systems have memory limits imposed by the hardware and operating system.
+	- **Software Compatibility:** 64-bit systems can run both 64-bit and 32-bit applications, but 16-bit applications are generally not supported.
+	- **Performance:** While certain operations might require slightly larger data sizes, the advantages of larger addressable memory and increased registers usually lead to improved performance for most applications.
+	- **Memory Usage:** 64-bit systems can handle larger amounts of memory, which is crucial for memory-intensive applications such as video editing, scientific simulations, and virtualization.
+	- **Usage:** Modern desktops, laptops, servers, and high-performance computing systems commonly use 64-bit architectures.
+
+	Choosing between 32-bit and 64-bit architectures depends on the specific requirements of your applications and the capabilities of your hardware. Generally, if you have a modern system and need to work with memory-intensive tasks or software that specifically requires 64-bit support, using a 64-bit architecture is recommended.
+
+	It's worth noting that the transition from 32-bit to 64-bit systems often requires recompiling software for the new architecture, and not all older software might be compatible. As technology evolves, 64-bit architectures are becoming the standard due to their performance and memory advantages.
