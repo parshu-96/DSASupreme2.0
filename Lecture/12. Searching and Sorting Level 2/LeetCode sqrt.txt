@@ -1,0 +1,33 @@
+https://leetcode.com/problems/sqrtx/
+
+class Solution {
+public:
+    int mySqrt(int x) 
+    {
+        int s=0;
+        int e=x;
+        long long int mid=s+(e-s)/2;
+        int ans=-1;
+        while(s<=e)
+        {
+            //Kya mid hi to ans nahi?
+            if(mid*mid==x)
+            {
+                return mid;
+            }
+            if(mid*mid<x)
+            {
+                // store ans
+                ans=mid;
+                s=mid+1;
+            }
+            else
+            {
+                // Right me jana hai
+                e=mid-1;
+            }
+            mid=s+(e-s)/2;
+        }
+        return ans;
+    }
+};
